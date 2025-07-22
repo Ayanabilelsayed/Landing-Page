@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Cosmetics | Premium Beauty Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f0ff 0%, #fff0f8 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #d4a5c0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-pink-300">Lumière</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-pink-300 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-pink-300 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-pink-300 px-3 py-2 text-sm font-medium">Products</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-pink-300 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-pink-300 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-pink-300 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <a href="#home" class="block text-gray-700 hover:text-pink-300 px-3 py-2 text-base font-medium">Home</a>
+            <a href="#about" class="block text-gray-700 hover:text-pink-300 px-3 py-2 text-base font-medium">About</a>
+            <a href="#products" class="block text-gray-700 hover:text-pink-300 px-3 py-2 text-base font-medium">Products</a>
+            <a href="#testimonials" class="block text-gray-700 hover:text-pink-300 px-3 py-2 text-base font-medium">Testimonials</a>
+            <a href="#contact" class="block text-gray-700 hover:text-pink-300 px-3 py-2 text-base font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">Illuminate Your Natural Beauty</h1>
+                    <p class="text-lg text-gray-600 mb-8">Premium cosmetics crafted with care and innovation to enhance your unique radiance.</p>
+                    <div class="flex space-x-4">
+                        <a href="#products" class="bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-full font-medium transition duration-300">Shop Now</a>
+                        <a href="#about" class="border border-pink-300 text-pink-300 hover:bg-pink-50 px-6 py-3 rounded-full font-medium transition duration-300">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a0061539-de41-462e-8184-8e2c480230d0.png" alt="Elegant display of Lumière cosmetics products arranged artfully with soft pink and gold packaging on marble surface" class="rounded-lg shadow-xl max-w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Story</h2>
+                <div class="w-20 h-1 bg-pink-300 mx-auto"></div>
+            </div>
+            
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9ce4e005-1098-465a-879c-6af53445ff0d.png" alt="Close-up of cosmetic ingredients being mixed in laboratory by scientist wearing gloves" class="rounded-lg shadow-lg w-full" />
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ethical Beauty, Exceptional Results</h3>
+                    <p class="text-gray-600 mb-6">Founded in 2015, Lumière Cosmetics began with a simple mission: to create high-performance beauty products that are both luxurious and ethical. Our team of cosmetic scientists and beauty experts work tirelessly to develop formulas that deliver visible results while respecting your skin and the environment.</p>
+                    <p class="text-gray-600 mb-6">We source only the finest natural ingredients and combine them with cutting-edge science to create products that truly make a difference. Every Lumière product is cruelty-free, vegan, and packaged sustainably.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-2 mr-3">
+                                <i class="fas fa-leaf text-pink-400"></i>
+                            </div>
+                            <span class="text-gray-700">100% Vegan</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-2 mr-3">
+                                <i class="fas fa-heart text-pink-400"></i>
+                            </div>
+                            <span class="text-gray-700">Cruelty-Free</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 rounded-full p-2 mr-3">
+                                <i class="fas fa-recycle text-pink-400"></i>
+                            </div>
+                            <span class="text-gray-700">Sustainable Packaging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Collections</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our premium beauty products designed to enhance your natural beauty</p>
+                <div class="w-20 h-1 bg-pink-300 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/073f135c-ede2-4d64-9e43-74076ede1146.png" alt="Lumière Radiance Serum in elegant glass bottle with dropper, placed on marble surface with pink rose petals" class="w-full h-64 object-cover" />
+                        <div class="absolute top-4 right-4 bg-pink-300 text-white text-xs font-bold px-2 py-1 rounded-full">BESTSELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Radiance Serum</h3>
+                        <p class="text-gray-600 text-sm mb-4">Illuminate your complexion with our vitamin-rich facial serum</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-400 font-bold">$49.99</span>
+                            <button class="bg-pink-300 hover:bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d60e896-6d4a-41ce-bee1-af2a7f09ce1e.png" alt="Lumière Hydra-Cream in gold jar with pink lid, surrounded by fresh aloe vera leaves" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Hydra-Cream</h3>
+                        <p class="text-gray-600 text-sm mb-4">24-hour hydration with hyaluronic acid and botanical extracts</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-400 font-bold">$39.99</span>
+                            <button class="bg-pink-300 hover:bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bc3a758c-d9e8-47c3-a01f-dd42ba706444.png" alt="Lumière Matte Lipstick collection in rose gold cases arranged in fan shape" class="w-full h-64 object-cover" />
+                        <div class="absolute top-4 right-4 bg-pink-300 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Matte Lipstick</h3>
+                        <p class="text-gray-600 text-sm mb-4">Velvety matte finish with nourishing ingredients in 12 shades</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-400 font-bold">$24.99</span>
+                            <button class="bg-pink-300 hover:bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-pink-300 text-pink-300 hover:bg-pink-50 px-6 py-3 rounded-full font-medium transition duration-300">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-pink-300 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3fed0c7-06ce-42ed-97c7-5a5b9eda3f42.png" alt="Portrait of Sarah J., a satisfied customer with blonde hair smiling" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The Radiance Serum has completely transformed my skin. After just two weeks, my complexion is brighter and more even. I've never been happier with a skincare product!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/96f4d24c-1d4a-4960-a402-256f7ea7b2ba.png" alt="Portrait of Michaela T., a happy customer with dark curly hair wearing minimal makeup" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michaela T.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As someone with sensitive skin, I'm always cautious about trying new products. Lumière's Hydra-Cream is the only moisturizer that doesn't irritate my skin while providing amazing hydration."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/837c5985-99c2-4bc1-abc1-f2b76ec7298a.png" alt="Portrait of Priya K., a loyal customer with dark hair wearing bold lipstick" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">Priya K.</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The Matte Lipstick collection is perfection! The colors are vibrant, they last all day without drying my lips, and the packaging is so luxurious. I've bought three shades already!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-pink-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Join Our Beauty Community</h2>
+            <p class="text-gray-600 mb-8">Subscribe to receive exclusive offers, beauty tips, and early access to new products</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" required />
+                <button type="submit" class="bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-full font-medium transition duration-300">Subscribe</button>
+            </form>
+            
+            <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-6">Have questions about our products or need beauty advice? Our team is here to help.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Headquarters</h4>
+                                <p class="text-gray-600">123 Beauty Avenue, Suite 100<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-phone-alt text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Customer Service</h4>
+                                <p class="text-gray-600">+1 (800) 123-4567<br>Mon-Fri, 9am-6pm EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email Us</h4>
+                                <p class="text-gray-600">hello@lumierecosmetics.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 text-sm font-medium mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" required />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 text-sm font-medium mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" required />
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 text-sm font-medium mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" required />
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-pink-300 hover:bg-pink-400 text-white px-6 py-3 rounded-full font-medium transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add animation class when elements come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.product-card, .testimonial-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+
